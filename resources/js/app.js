@@ -1,10 +1,5 @@
-require('./bootstrap');
-
 import { createApp } from 'vue'
-import Products from './components/Products'
+import App from './App.vue'
+import router from './router' // <---
 
-const app = createApp({})
-
-app.component('products', Products)
-
-app.mount('#app')
+createApp(App).use(router).mount('#app')
