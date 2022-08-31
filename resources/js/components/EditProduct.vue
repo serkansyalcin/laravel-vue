@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h3 class="text-center">Edit Product</h3>
+        <h3 class="text-left">Edit Product</h3>
         <div class="row">
             <div class="col-md-6">
                 <form @submit.prevent="updateProduct">
@@ -45,7 +45,7 @@ export default {
             formData.append('name', this.product.name);
             formData.append('picture', this.product.file);
             axios
-                .patch(`http://localhost:8000/api/products/${this.$route.params.id}`, formData , {
+                .post(`http://localhost:8000/api/product/update/${this.$route.params.id}`, formData , {
                     headers: {
                         'Content-Type': 'multipart/form-data'
                     }

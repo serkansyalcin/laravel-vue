@@ -1,8 +1,8 @@
 <template>
-    <div>
+    <div class="container">
         <h2 class="text-center">Products List</h2>
  
-        <table class="table">
+        <table class="table" >
             <thead>
             <tr>
                 <th>ID</th>
@@ -47,12 +47,15 @@ export default {
     },
     methods: {
         deleteProduct(id) { 
-            axios
+            if (confirm("Are you sure?")) {
+                axios
                 .delete(`http://localhost:8000/api/products/${id}`)
                 .then(response => {
                     let i = this.products.map(data => data.id).indexOf(id);
                     this.products.splice(i, 1)
                 });
+            } 
+           
         }
     }
 }

@@ -1,12 +1,15 @@
 <template>
     <div class="container"> 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="collapse navbar-collapse">
-                <div class="navbar-nav">
-                    <router-link to="/products" class="nav-item nav-link">Products List</router-link>
-                    <router-link to="/create" class="nav-item nav-link">Create Product</router-link>
-                </div>
+        <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                 <router-link to="/products" class="navbar-brand">Products List</router-link>             
             </div>
+            <div class="navbar-header">
+               <router-link to="/create" class="navbar-brand">Create Product</router-link>      
+            </div>
+       
+        </div>
         </nav>
         <router-view> </router-view>
     </div>
