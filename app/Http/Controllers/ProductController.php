@@ -19,6 +19,7 @@ class ProductController extends Controller
         $disk = 'public_uploads';
         $destination_path = "public/uploads";
         $hostUrl = config('app.url');
+        $path = '';
         
         if ($request->hasFile('picture')) {
             $logo = $request->picture;
